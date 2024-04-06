@@ -6,26 +6,44 @@ import java.util.Scanner;
 
 public class Main {
 
+    static int x = 0;
+    static int y = 0;
+
     public static void main(String[] args) {
-        boolean isContinue = true;
-        int x = 0;
-        int y = 0;
-        while (isContinue) {
-            System.out.println("Сдвиньте робота: \n1 - left\n2- right\n3 - up\n4 - down");
-            int input = new Scanner(System.in).nextInt();
-            if (input == 1) {
-                x--;
-            } else if (input == 2) {
-                x++;
-            } else if (input == 3) {
-                y++;
-            } else if (input == 4) {
-                y--;
+        while (true) {
+            int command = inputCommand();
+            if (command == 1) {
+                y -= inputSteps();
+            } else if (command == 2) {
+                y += inputSteps();;
+            } else if (command == 3) {
+                x += inputSteps();;
+            } else if (command == 4) {
+                x -= inputSteps();;
+            } else if (command == 5) {
+                showInfo();
             } else {
-                System.out.println("Error");
-                isContinue = false;
+                errorInput();
             }
-            System.out.println("Координата X: " + x + " Координата Y: " + y);
         }
+    }
+
+    private static void errorInput() {
+        System.out.println("Команда не верна!");
+    }
+
+    private static void showInfo() {
+        System.out.println("X " + x + "; Y " + y);
+    }
+
+    private static int inputSteps() {
+        System.out.println("Введите количество шагов");
+        return new Scanner(System.in).nextInt();
+    }
+
+    private static int inputCommand() {
+        System.out.println("Введите команду: \n1 - пойти вниз\n2 - пойти вверх\n3 - пойти направо\n4 - пойти налево" +
+                "\n5 - печать координат");
+        return new Scanner(System.in).nextInt();
     }
 }
