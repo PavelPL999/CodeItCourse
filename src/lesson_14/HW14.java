@@ -1,6 +1,5 @@
 package lesson_14;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class HW14 {
