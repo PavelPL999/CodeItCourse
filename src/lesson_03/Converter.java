@@ -6,9 +6,10 @@ public class Converter {
 
     public static final double K1 = 1.8;
     public static final double K2 = 32.0;
+    public static final int K3 = 1024;
 
     public static int convertMbInGg(int m) {
-        return m * 1024;
+        return m * K3;
     }
 
     public static double indexBodyWeight(double weight, double height) {
