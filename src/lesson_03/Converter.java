@@ -1,15 +1,11 @@
 package lesson_03;
 
-/*
-    Написать программу, которая конвертирует мегабайты в гигабайты
-    Написать программу, к/я рассчитывает индекс массы тела (масса кг / (рост, cм * рост, cм))
-    18.5 - 24.9 - нормальный вес тела
-    25 - 30 избыточная масса
- */
-
 import java.util.Scanner;
 
 public class Converter {
+
+    public static final double K1 = 1.8;
+    public static final double K2 = 32.0;
 
     public static int convertMbInGg(int m) {
         return m * 1024;
@@ -19,8 +15,8 @@ public class Converter {
         return (weight / (height * height)) * 10_000;
     }
 
-    public static double convertTempFromCelsiusInFahrenheit(double tempC) {
-        return tempC * 1.8 + 32;
+    public static double convertTempFromCelsiusInFahrenheit(double temp) {
+        return temp * K1 + K2;
     }
 
     public static void convertMoney() {
