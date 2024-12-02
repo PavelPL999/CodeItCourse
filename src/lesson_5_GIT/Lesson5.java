@@ -13,5 +13,7 @@ package lesson_5_GIT;
 
 public class Lesson5 {
 
+    public static void main(String[] args) {
 
+    }
 }
