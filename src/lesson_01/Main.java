@@ -18,13 +18,13 @@ import lesson_13.hw13computer.processor.Processor;
 public class Main {
 
    public static void main(String[] args) {
-       Processor processor = new Processor(Frequency.TWO_THOUSAND, CoreCount.FOUR, Creator.INTEL, 500);
-       Memory memory = new Memory(MemoryType.DDR4, 16, 500);
-       HardDisc hardDisc = new HardDisc(HardDiscType.SSD, 500, 500);
-       Monitor monitor = new Monitor(17, MonitorType.IPS, 500);
-       Keyboard keyboard = new Keyboard(KeyboardType.WIRELESS, Illuminate.YES, 500);
+       Processor processor = new Processor (Frequency.TWO_THOUSAND, CoreCount.FOUR, Creator.INTEL, 500);
+       Memory memory = new Memory (MemoryType.DDR4, 16, 500);
+       HardDisc hardDisc = new HardDisc (HardDiscType.SSD, 500, 500);
+       Monitor monitor = new Monitor (17, MonitorType.IPS, 500);
+       Keyboard keyboard = new Keyboard (KeyboardType.WIRELESS, Illuminate.YES, 500);
 
-       Computer computer = new Computer(processor, memory, hardDisc, monitor, keyboard, "Baykal", "Atom ");
+       Computer computer = new Computer (processor, memory, hardDisc, monitor, keyboard, "Baykal", "Atom ");
        System.out.println(computer.getWeight());
     }
 }
