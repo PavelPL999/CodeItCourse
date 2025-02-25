@@ -1,14 +1,11 @@
-package lesson_02;
+package lesson_02.homework;
 
 import java.util.Scanner;
 
-public class Class02 {
+public class Main {
 
 
     public static void main(String[] args) {
-        // ctrl - alt - L
-        // formatting code
-
         // The first error is in this block
         System.out.println("***** Welcome to simple program *****");
         System.out.println("*\tThis program contains 3 errors\t*");
